@@ -18,7 +18,7 @@
   --color-box-base: #FFFFFF;
   --color-box-footer: #FAFAFC;
 
-  font-size: 60%;
+  font-size: 57.5%;
 }
 
 * {
@@ -43,11 +43,6 @@ body {
 
 body, inout, button, textarea {
     font: 500 1.6rem Poppins
-}
-
-.container {
-    width: 90vw;
-    max-width: 700px;
 }
 
 @media screen and (min-width: 700px){

@@ -1,0 +1,75 @@
+.page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-in-primary);
+    background-color: var(--color-primary);
+}
+.container {
+    width: 90%;
+    max-width: 700px;
+}
+.container > img{
+    width: 100%;
+}
+.logoContainer{
+    text-align: center;
+    margin-bottom: 3.2rem;
+}
+.logoContainer img{
+    height: 10rem;
+}
+.logoContainer h2{
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height:  4.6rem;
+    margin-top: 0.8rem;
+}
+.buttonsContainer{
+    display: flex;
+    justify-content: center;
+    margin: 3.2rem 0;
+}
+.buttonsContainer a{
+    width: 30rem;
+    height: 10.4rem;
+    border-radius: 0.8rem;
+    margin-right: 1.6rem;
+    font: 700 2.0rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-button-text);
+    transition: background-color .2s;
+}
+.buttonsContainer a img{
+    width: 4rem;
+}
+.buttonsContainer a:nth-child(1){
+    background-color: var(--color-primary-lighter);
+    margin-right: 1.6rem;
+}
+.buttonsContainer a:nth-child(2){
+    background-color: var(--color-secundary);
+    margin-right: 1.6rem;
+}
+.buttonsContainer a:nth-child(1):hover{
+    background-color: var(--color-primary-light);
+    margin-right: 1.6rem;
+}
+.buttonsContainer a:nth-child(2):hover{
+    background-color: var(--color-secundary-dark);
+    margin-right: 1.6rem;
+}
+.page span{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page span img{
+    margin-left: .8rem;
+}
