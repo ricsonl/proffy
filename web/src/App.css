@@ -42,7 +42,8 @@ body {
 }
 
 body, inout, button, textarea {
-    font: 500 1.6rem Poppins
+    font: 500 1.6rem Poppins;
+    color: var(--color-text-base);
 }
 
 @media screen and (min-width: 700px){

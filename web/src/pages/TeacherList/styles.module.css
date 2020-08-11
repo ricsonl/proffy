@@ -28,15 +28,24 @@
   padding: 0 1.6rem;
   font: 1.6rem Archivo;
 }
-.inputBlock:focus-within:after{
+.inputBlock:after{
   content: '';
-  width: calc(100% - 3.2rem);
+  width: 0;
   height: 2px;
   background-color: var(--color-primary-light);
   position: absolute;
   left: 1.6rem;
   right: 1.6rem;
   bottom: 0;
+  transition: width .1s;
+}
+.inputBlock:focus-within:after{
+  width: calc(100% - 3.2rem);
+}
+
+.page main{
+  margin: 3.2rem auto;
+  width: 90%;
 }
 
 @media screen and (min-width: 700px){
@@ -54,5 +63,9 @@
   .inputBlock + .inputBlock{
     margin-top: 0;
   }
-
+  .page main{
+    padding: 3.2rem 0;
+    max-width: 740px;
+    margin: 0 auto;
+  }
 }
