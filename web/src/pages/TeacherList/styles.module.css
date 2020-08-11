@@ -8,41 +8,6 @@
 .page form label{
   color: var(--color-text-in-primary);
 }
-.inputBlock{
-  position: relative;
-}
-.inputBlock + .inputBlock{
-  margin-top: 1.4rem;
-}
-.inputBlock label{
-  font-size: 1.4rem;
-}
-.inputBlock input{
-  width: 100%;
-  height: 5.6rem;
-  margin-top: .8rem;
-  border-radius: .8rem;
-  background-color: var(--color-input-background);
-  border: 1px solid var(--color-line-in-white);
-  outline: none;
-  padding: 0 1.6rem;
-  font: 1.6rem Archivo;
-}
-.inputBlock:after{
-  content: '';
-  width: 0;
-  height: 2px;
-  background-color: var(--color-primary-light);
-  position: absolute;
-  left: 1.6rem;
-  right: 1.6rem;
-  bottom: 0;
-  transition: width .1s;
-}
-.inputBlock:focus-within:after{
-  width: calc(100% - 3.2rem);
-}
-
 .page main{
   margin: 3.2rem auto;
   width: 90%;
@@ -59,9 +24,6 @@
     position: absolute;
     bottom: -28px;
     
-  }
-  .inputBlock + .inputBlock{
-    margin-top: 0;
   }
   .page main{
     padding: 3.2rem 0;
