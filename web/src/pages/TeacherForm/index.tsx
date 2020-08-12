@@ -83,18 +83,21 @@ const TeacherForm = () => {
           <fieldset>
             <legend>Seus dados</legend>
             <Input
+              required
               name="name"
               label="Nome completo"
               value={name}
               onChange={(e) => { setName(e.target.value) }}
             />
             <Input
+              required
               name="avatar"
               label="Avatar" 
               value={avatar}
               onChange={(e) => { setAvatar(e.target.value) }}
             />
             <Input
+              required
               name="whatsapp"
               label="Whatsapp" 
               value={whatsapp}
@@ -111,6 +114,7 @@ const TeacherForm = () => {
           <fieldset>
             <legend>Sobre a aula</legend>
             <Select
+              required
               name="subject"
               label="Matéria"
               value={subject}
@@ -130,6 +134,7 @@ const TeacherForm = () => {
               ]}
             />
             <Input
+              required
               name="cost"
               label="Custo da sua hora por aula"
               value={cost}
@@ -150,6 +155,7 @@ const TeacherForm = () => {
               return (
                 <div key={item.key} className={styles.scheduleItem}>
                   <Select
+                    required
                     name="week_day"
                     label="Dia da semana"
                     value={item.week_day}

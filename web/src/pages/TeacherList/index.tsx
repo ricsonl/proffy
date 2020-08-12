@@ -43,6 +43,7 @@ const TeacherList = () => {
       <PageHeader title="Estes são os proffys disponíveis.">
         <form onSubmit={searchTeachers}>
           <Select
+            required
             name="subject"
             label="Matéria"
             value={subject}
@@ -62,6 +63,7 @@ const TeacherList = () => {
             ]}
           />
           <Select
+            required
             name="week_day"
             label="Dia da semana"
             value={week_day}
@@ -77,7 +79,8 @@ const TeacherList = () => {
             ]}
           />
           <div className={styles.timeAndSearch}>
-            <Input 
+            <Input
+              required
               type="time" 
               name="time" 
               label="Hora"
