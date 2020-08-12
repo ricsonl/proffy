@@ -11,6 +11,36 @@
 .page form label{
   color: var(--color-text-in-primary);
 }
+.timeAndSearch{
+  display: grid;
+  grid-template-columns: 1fr 0fr;
+  align-items: flex-end;
+}
+.timeAndSearch button{
+  margin-left: 1.6rem;
+  width: 5.6rem;
+  height: 5.6rem;
+  background: var(--color-secundary);
+  border: 0;
+  border-radius: 0.8rem;
+  outline: none;
+  cursor: pointer;
+  font: 700 1.4rem Archivo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+.timeAndSearch button img{
+  height: 2.4rem;
+  transition: transform .2s;
+}
+.timeAndSearch button:hover{
+  background-color: var(--color-secundary-dark);
+}
+.timeAndSearch button:hover img{
+  transform: rotateZ(90deg);
+}
 .page main{
   margin: 3.2rem auto;
   width: 90%;

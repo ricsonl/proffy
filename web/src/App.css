@@ -41,7 +41,7 @@ body {
     justify-content: center;
 }
 
-body, inout, button, textarea {
+body, input, select, button, textarea {
     font: 500 1.6rem Poppins;
     color: var(--color-text-base);
 }

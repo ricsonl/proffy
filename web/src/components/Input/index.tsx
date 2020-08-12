@@ -11,7 +11,7 @@ const Input: React.FC<InputProps> = ({ label, name, ...rest }) => {
   return(
     <div className={styles.inputBlock}>
       <label htmlFor={name}>{label}</label>
-      <input defaultValue="" type="text" id={name} {...rest}/>
+      <input required type="text" id={name} {...rest}/>
     </div>
   );
 }
