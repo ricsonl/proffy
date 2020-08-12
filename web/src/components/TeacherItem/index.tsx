@@ -4,33 +4,49 @@ import wppIcon from '../../assets/images/icons/whatsapp.svg';
 
 import styles from './styles.module.css';
 
-const TeacherItem = () => {
+export interface TeacherClassInfo {
+  avatar: string;
+  bio: string;
+  cost: number;
+  id: number;
+  name: string;
+  subject: string;
+  user_id: number;
+  whatsapp: string
+};
+
+interface TeacherItemProps{
+  item: TeacherClassInfo;
+  createConnection: Function;
+};
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ item, createConnection}) => {
+
   return (
     <article className={styles.teacherItem}>
       <header>
-        <img src="https://avatars2.githubusercontent.com/u/54897065?s=460&u=38b229750c4f404bda4643173ffa9545dda13565&v=4" alt="Ricson Vilaça"/>
+        <img src={item.avatar} alt={item.name}/>
         <div>
-          <strong>Ricson Vilaça</strong>
-          <span>ReactJS</span>
+          <strong>{item.name}</strong>
+          <span>{item.subject}</span>
         </div>
       </header>
 
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis
-      condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et
-      netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et,
-      sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.
-      </p>
+      <p>{item.bio}</p>
 
       <footer>
         <p>
           Preço/Hora
-          <strong>R$ 50,00</strong>
+          <strong>R$ {item.cost}</strong>
         </p>
-        <button type="button">
+        <a 
+          onClick={() => createConnection(item.user_id)}
+          href={`https://wa.me/${item.whatsapp}`}
+          target="_blank"
+        >
           <img src={wppIcon} alt="Whatsapp"/>
           Entrar em contato
-        </button>
+        </a>
       </footer>
     </article>
   );

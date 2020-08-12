@@ -3,7 +3,7 @@ import React, { useState, FormEvent } from 'react';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
-import TeacherItem from '../../components/TeacherItem';
+import TeacherItem, { TeacherClassInfo } from '../../components/TeacherItem';
 
 import searchIcon from '../../assets/images/icons/search.svg';
 
@@ -11,6 +11,8 @@ import styles from './styles.module.css';
 import api from '../../services/api';
 
 const TeacherList = () => {
+
+  const [teachers, setTeachers] = useState([]);
 
   const [subject, setSubject] = useState('');
   const [week_day, setWeekDay] = useState('');
@@ -27,8 +29,14 @@ const TeacherList = () => {
       },
     });
 
-    console.log(response.data)
+    setTeachers(response.data);
   };
+
+  const createNewConnection = (id:number) => {
+    api.post('connections', {
+      user_id: id,
+    });
+  }
 
   return (
     <div className={styles.page}>
@@ -84,8 +92,16 @@ const TeacherList = () => {
       </PageHeader>
 
       <main>
-        <TeacherItem />
-        <TeacherItem />
+        {
+          teachers.map((item:TeacherClassInfo) => {
+            return (
+              <TeacherItem
+                key={item.id}
+                item={item}
+                createConnection={createNewConnection} />
+            );
+          })
+        }
       </main>
     </div>
   );
