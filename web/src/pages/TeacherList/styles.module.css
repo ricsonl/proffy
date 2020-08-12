@@ -5,6 +5,9 @@
 .page form{
   margin-top: 3.2rem;
 }
+.page form > *:not(:last-child){
+  margin-bottom: 1.4rem;
+}
 .page form label{
   color: var(--color-text-in-primary);
 }
@@ -24,6 +27,9 @@
     position: absolute;
     bottom: -28px;
     
+  }
+  .page form > *:not(:last-child){
+    margin-bottom: 0;
   }
   .page main{
     padding: 3.2rem 0;
