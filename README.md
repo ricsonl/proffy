@@ -3,7 +3,7 @@
 <h4 align="center">Projeto da Next Level Week #2, da <a href="https://rocketseat.com.br/">Rocketseat</a></h4>
 <p align="center"><img height="300" src="web/src/assets/preview/web.png" /></p>
 
-<h2>Funcionalidades:</h2>
+<h2>:memo: Funcionalidades:</h2>
 <ul>
   <li>Cadastro de professores</li>
   <li>Registro de cronograma com disciplina e horários</li>
@@ -17,7 +17,7 @@
   <li>Contato via Whatsapp (redirecionamento)</li>
 </ul>
 
-<h2>Tecnologias utilizadas:</h2>
+<h2>:computer: Principais tecnologias utilizadas:</h2>
 <h3>Frontend:</h3>
 <ul>
   <li>HTML5 + CSS3</li>
