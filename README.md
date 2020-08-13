@@ -16,3 +16,17 @@
   </li>
   <li>Contato via Whatsapp (redirecionamento)</li>
 </ul>
+
+<h2>Tecnologias utilizadas:</h2>
+<h3>Frontend:</h3>
+<ul>
+  <li>HTML5 + CSS3</li>
+  <li>Typescript</li>
+  <li>React</li>
+</ul>
+<h3>Backend:</h3>
+<ul>
+  <li>Node</li>
+  <li>Express</li>
+  <li>Knex + Sqlite</li>
+</ul>
