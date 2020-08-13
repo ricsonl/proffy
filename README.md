@@ -14,4 +14,5 @@
       <li>Horário</li>
     </ul>
   </li>
+  <li>Contato via Whatsapp (redirecionamento)</li>
 </ul>
