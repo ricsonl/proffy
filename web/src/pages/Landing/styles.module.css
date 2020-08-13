@@ -1,90 +1,93 @@
- 
 .page{
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-text-in-primary);
-  background-color: var(--color-primary);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-in-primary);
+    background-color: var(--color-primary);
 }
 .container {
-  width: 90%;
-  max-width: 700px;
+    width: 90%;
+    height: 70%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .container > img{
-  width: 100%;
+    height: 40%;
+    align-self: center;
 }
 .logoContainer{
-  text-align: center;
-  margin-bottom: 3.2rem;
+    text-align: center;
+    margin-bottom: 3.2rem;
 }
 .logoContainer img{
-  height: 10rem;
+    height: 8rem;
 }
 .logoContainer h2{
-  font-weight: 500;
-  font-size: 2.4rem;
-  line-height:  4.6rem;
-  margin-top: 0.8rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height:  4.6rem;
+    margin-top: 0.8rem;
 }
 .buttonsContainer{
-  display: flex;
-  justify-content: center;
-  margin: 3.2rem 0;
+    display: flex;
+    justify-content: center;
+    margin: 3.2rem 0;
 }
 .buttonsContainer a{
-  width: 30rem;
-  height: 10.4rem;
-  border-radius: 0.8rem;
-  margin-right: 1.6rem;
-  font: 700 2.0rem Archivo;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: var(--color-button-text);
-  transition: background-color .2s;
+    width: 22rem;
+    height: 8.4rem;
+    border-radius: 0.8rem;
+    font: 700 2.0rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-button-text);
+    transition: background-color .2s;
 }
 .buttonsContainer a img{
-  width: 4rem;
+    width: 4rem;
 }
 .buttonsContainer a:nth-child(1){
-  background-color: var(--color-primary-lighter);
-  margin-right: 1.6rem;
+    background-color: var(--color-primary-lighter);
+    margin-right: 1.6rem;
 }
 .buttonsContainer a:nth-child(2){
-  background-color: var(--color-secundary);
-  margin-right: 1.6rem;
+    background-color: var(--color-secundary);
 }
 .buttonsContainer a:nth-child(1):hover{
-  background-color: var(--color-primary-light);
-  margin-right: 1.6rem;
+    background-color: var(--color-primary-light);
 }
 .buttonsContainer a:nth-child(2):hover{
-  background-color: var(--color-secundary-dark);
-  margin-right: 1.6rem;
+    background-color: var(--color-secundary-dark);
 }
 .page span{
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .page span img{
-  margin-left: .8rem;
+    margin-left: .8rem;
 }
-@media screen and (min-width: 550px) and (max-width: 700px){
-  .container {
-    width: 65%;
+@media screen and (min-width: 500px){
+  .container > img{
+    width: 70%;
+    height: initial;
+    max-height: 200px;
   }
 }
-@media (min-width: 700px) {
+@media screen and (min-width: 1100px) {
   .container{
-    max-width: 100%;
+    height: initial;
+    max-width: 1100px;
     display: grid;
     grid-template-rows: 350px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     grid-template-areas:
       'logo hero hero'
       'buttons buttons total'
@@ -92,7 +95,9 @@
   }
   .container > img{
     grid-area: hero;
-    align-self: center;
+    justify-self: end;
+    max-height: initial;
+    width: 100%;
   }
   .logoContainer{
     grid-area: logo;
@@ -102,11 +107,10 @@
   }
   .logoContainer h2{
     text-align: initial;
-    font-size: 2.4rem;
+    font-size: 3.6rem;
   }
   .logoContainer img{
-    height: 80%;
-    width: 93%;
+    height: 100%;
   }
   .buttonsContainer{
     grid-area: buttons;
@@ -114,6 +118,8 @@
   }
   .buttonsContainer a{
     font-size: 2.4rem;
+    width: 30rem;
+    height: 10.4rem;
   }
   .buttonsContainer a img{
     margin-right: 2.4rem;
@@ -121,20 +127,5 @@
   .page span{
     grid-area: total;
     justify-self: end;
-  }
-}
-@media screen and (min-width: 1050px){
-  .container{
-    grid-template-columns: 2fr 1fr 1fr;
-  }
-  .container > img{
-    align-self: initial;
-  }
-  .logoContainer h2{
-    font-size: 3.6rem;
-  }
-  .logoContainer img{
-    height: 80%;
-    width: 90%;
   }
 }
