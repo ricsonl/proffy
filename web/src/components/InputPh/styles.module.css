@@ -19,10 +19,10 @@
   background-color: var(--color-primary-light);
   position: absolute;
   left: 0rem;
-  bottom: 0;
 }
 .inputBlock:focus-within:before{
-  height: 90%;
+  height: 70%;
+  align-self: center;
 }
 .inputBlock > img{
   position: absolute;
